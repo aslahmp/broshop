@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "173579297382",
+    "project_id": "broshopapp",
+    "storage_bucket": "broshopapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173579297382:android:9b567ef1e92fc8778ec3a7",
+        "android_client_info": {
+          "package_name": "com.broshop.broshop_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173579297382-7umf6c0hpd90n2ia6kp7tt9de0mcj7ig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF0LUZFAEhnmCrkOTEo3VA7iv2m_rvpPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173579297382-7umf6c0hpd90n2ia6kp7tt9de0mcj7ig.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "173579297382-ffr7checi8qek8siompvjng3p4u4kq3s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.broshop.broshopApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
