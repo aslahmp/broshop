@@ -13,7 +13,7 @@ class UserRepository implements IUserRepository {
         url: Uri.parse(
             '${APIEndPoints.urlString(EndPoints.user)}/${UserManager.userId}'),
       );
-      var userModel = UserModel.fromJson(resultJson);
+      var userModel = UserModel.fromJson(resultJson['data']);
       return Success(userModel);
     } catch (e) {
       return Failure(e.toString());
