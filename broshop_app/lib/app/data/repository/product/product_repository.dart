@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:broshop_app/app/data/model/product_model.dart';
+import 'package:flutter/services.dart';
 import 'package:result_type/src/result.dart';
 
 import '../../../../infrastructure/networking/index.dart';
@@ -40,7 +43,30 @@ class ProductRepository implements IProductRepository {
       var products = List.from(result['data'])
           .map((e) => ProductModel.fromJson(e))
           .toList();
+      var productsJson = await getProductsFromJson();
+      products.addAll(productsJson);
+
       return Success(products);
+    } catch (e) {
+      return Failure(e.toString());
+    }
+  }
+
+  Future<List<ProductModel>> getProductsFromJson() async {
+    final String response = await rootBundle.loadString('assets/products.json');
+    final data = await json.decode(response);
+    var products =
+        List.from(data['data']).map((e) => ProductModel.fromJson(e)).toList();
+    return products;
+  }
+
+  @override
+  Future<Result> delete(String id) async {
+    try {
+      var result = await _helper.delete(
+        url: Uri.parse('${APIEndPoints.urlString(EndPoints.product)}/$id'),
+      );
+      return Success(result.toString());
     } catch (e) {
       return Failure(e.toString());
     }

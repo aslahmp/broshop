@@ -67,6 +67,21 @@ class ProductController {
                 });
             });
         }
+        async delete(req, res) {
+            Product.destroy({
+                where: {
+                    id:req.params.id,
+                }
+            }).then().then(data => {
+                res.send({ 'data': data });
+            }).catch(err => {
+                console.log(err.message);
+                res.status(500).send({
+                    message:
+                        err.message || "Some error occurred while creating the Tutorial."
+                });
+            });
+        }
     
 }
 module.exports = new ProductController();

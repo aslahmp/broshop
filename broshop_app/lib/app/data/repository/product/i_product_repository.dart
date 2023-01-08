@@ -6,4 +6,5 @@ abstract class IProductRepository {
   Future<Result> createProduct(ProductModel productModel);
   Future<Result> updateProduct(ProductModel productModel);
   Future<Result> getProduct();
+  Future<Result> delete(String id);
 }

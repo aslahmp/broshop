@@ -43,4 +43,7 @@ app.put('/product', function (req, res) {
 app.get('/product', function (req, res) {
     productController.get(req, res)
 })
+app.delete('/product/:id', function (req, res) {
+    productController.delete(req, res)
+})
 app.listen(port, () => console.log(`Example app listening on port ${port}!`)) 

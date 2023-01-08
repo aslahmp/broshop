@@ -19,7 +19,20 @@ class ProductAddEditController extends GetxController {
   ProductModel? productModel;
   @override
   void onInit() {
+    productModel = Get.arguments;
+    initEdit();
     super.onInit();
+  }
+
+  void initEdit() {
+    if (productModel != null) {
+      nameController.text = productModel!.name;
+      strapColorController.text = productModel!.strapColor;
+      priceController.text = productModel!.price.toString();
+      highlightController.text = productModel!.highlight;
+      imageUrlController.text = productModel!.image;
+      isActive.value = productModel!.status;
+    }
   }
 
   void submit() async {
@@ -38,8 +51,8 @@ class ProductAddEditController extends GetxController {
       } else {
         create(product);
       }
-      isLoading(false);
     }
+    isLoading(false);
   }
 
   void updateProduct(ProductModel product) async {

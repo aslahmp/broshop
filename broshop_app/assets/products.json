@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Omega - 4533",
+            "strapColor": "Grey",
+            "highlight": "Hours, Minutes, Additional 24 Hour Hand (adjustable), Seconds | Date | Co-Axial Escapement, Chronometer",
+            "price": 2394566,
+            "status": true,
+            "image": "https://cdn.watchbase.com/watch/lg/origin:png/omega/de-ville/4533-40-00-84.webp"
+        },
+        {
+            "id": 3,
+            "name": "Breitling - A1338012",
+            "strapColor": "Black",
+            "highlight": "Hours, Minutes, Small Seconds | Date | Chronograp",
+            "price": 1253452,
+            "status": true,
+            "image": "https://cdn.watchbase.com/watch/lg/origin:jpg/breitling/avenger/a1338012b995743p-c7.webp"
+        },
+        {
+            "id": 4,
+            "name": "Panerai - PAM00510",
+            "strapColor": "Black",
+            "highlight": "Hours, Minutes, Small Seconds",
+            "price": 8367829,
+            "status": false,
+            "image": "https://cdn.watchbase.com/watch/lg/origin:jpg/panerai/luminor/pam00510-d2.webp"
+        },
+        {
+            "id": 5,
+            "name": "Rolex - 278274",
+            "strapColor": "Steel",
+            "highlight": "Hours, Minutes, Seconds | Date | Chronometer",
+            "price": 2831027,
+            "status": true,
+            "image": "https://cdn.watchbase.com/watch/lg/origin:jpg/rolex/datejust-31/278274-0026-ba.webp"
+        },
+        {
+            "id": 6,
+            "name": "TAG Heuer - CBN2018",
+            "strapColor": "Black ",
+            "highlight": "Hours, Minutes, Small Seconds | Date | Chronograph, Column wheel",
+            "price": 3323244,
+            "status": true,
+            "image": "https://cdn.watchbase.com/watch/lg/origin:jpg/tag-heuer/carrera/cbn2018-fc6520-8.webp"
+        }
+    ]
+}

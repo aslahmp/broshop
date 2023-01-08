@@ -56,20 +56,35 @@ class ProductTile extends GetView<ProductController> {
               ),
               verticalSpace(10),
               if (!((!UserManager.isAdmin) && (!product.status)))
-                SizedBox(
-                    width: 150,
-                    height: 30,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        controller.productAction(product);
-                      },
-                      style: AppConstants.buttonStyle,
-                      child: Text(
-                        UserManager.isAdmin ? "Edit product" : "Add to cart",
-                        style: AppTextStyles.bold
-                            .copyWith(color: AppColors.white, fontSize: 14),
-                      ),
-                    )),
+                Row(
+                  children: [
+                    SizedBox(
+                        width: 150,
+                        height: 30,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            controller.productAction(product);
+                          },
+                          style: AppConstants.buttonStyle,
+                          child: Text(
+                            UserManager.isAdmin
+                                ? "Edit product"
+                                : "Add to cart",
+                            style: AppTextStyles.bold
+                                .copyWith(color: AppColors.white, fontSize: 14),
+                          ),
+                        )),
+                    if (UserManager.isAdmin)
+                      IconButton(
+                          onPressed: () {
+                            controller.productDelete(product);
+                          },
+                          icon: Icon(
+                            Icons.delete,
+                            color: AppColors.darkRed,
+                          ))
+                  ],
+                ),
               verticalSpace(10),
               if (!product.status)
                 Text(
