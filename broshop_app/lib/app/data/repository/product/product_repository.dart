@@ -30,4 +30,19 @@ class ProductRepository implements IProductRepository {
       return Failure(e.toString());
     }
   }
+
+  @override
+  Future<Result> getProduct() async {
+    try {
+      var result = await _helper.get(
+        url: Uri.parse(APIEndPoints.urlString(EndPoints.product)),
+      );
+      var products = List.from(result['data'])
+          .map((e) => ProductModel.fromJson(e))
+          .toList();
+      return Success(products);
+    } catch (e) {
+      return Failure(e.toString());
+    }
+  }
 }

@@ -17,7 +17,7 @@ class ProductModel {
   late final bool status;
 
   ProductModel.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
+    id = json['id'].toString();
     name = json['name'];
     strapColor = json['strapColor'];
     highlight = json['highlight'];

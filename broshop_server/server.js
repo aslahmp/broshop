@@ -37,4 +37,10 @@ app.post('/login', function (req, res) {
 app.post('/product', function (req, res) {
     productController.add(req, res)
 })
+app.put('/product', function (req, res) {
+    productController.update(req, res)
+})
+app.get('/product', function (req, res) {
+    productController.get(req, res)
+})
 app.listen(port, () => console.log(`Example app listening on port ${port}!`)) 

@@ -5,4 +5,5 @@ import '../../../../infrastructure/networking/index.dart';
 abstract class IProductRepository {
   Future<Result> createProduct(ProductModel productModel);
   Future<Result> updateProduct(ProductModel productModel);
+  Future<Result> getProduct();
 }
