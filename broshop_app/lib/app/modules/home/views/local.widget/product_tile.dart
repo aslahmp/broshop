@@ -23,9 +23,12 @@ class ProductTile extends GetView<ProductController> {
       padding: EdgeInsets.symmetric(vertical: 20),
       child: Row(
         children: [
-          Image.network(
-            product.image,
-            width: 90,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.network(
+              product.image,
+              width: 80,
+            ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

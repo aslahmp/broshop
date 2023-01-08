@@ -17,7 +17,6 @@ class Products extends GetView<ProductController> {
         return ListView.builder(
             itemCount: controller.products.length,
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return ProductTile(product: controller.products[index]);
             });

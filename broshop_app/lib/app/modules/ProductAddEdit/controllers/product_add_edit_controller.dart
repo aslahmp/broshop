@@ -4,6 +4,8 @@ import 'package:broshop_app/app/data/repository/product/product_repository.dart'
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../infrastructure/index.dart';
+
 class ProductAddEditController extends GetxController {
   var formKey = GlobalKey<FormState>();
   var nameController = TextEditingController();
@@ -32,11 +34,29 @@ class ProductAddEditController extends GetxController {
           status: isActive.value);
       if (productModel != null) {
         product.id = productModel!.id;
-        _productRepository.updateProduct(product);
+        updateProduct(product);
       } else {
-        _productRepository.createProduct(product);
+        create(product);
       }
       isLoading(false);
+    }
+  }
+
+  void updateProduct(ProductModel product) async {
+    var result = await _productRepository.updateProduct(product);
+    if (result.isSuccess) {
+      Get.back();
+    } else {
+      AppSnackBar.showSnackBar(result.failure);
+    }
+  }
+
+  void create(ProductModel product) async {
+    var result = await _productRepository.createProduct(product);
+    if (result.isSuccess) {
+      Get.back();
+    } else {
+      AppSnackBar.showSnackBar(result.failure);
     }
   }
 }
