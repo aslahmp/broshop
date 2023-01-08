@@ -17,6 +17,7 @@ db.sequelize.sync({
         console.log("Failed to sync db: " + err.message);
     });
 const userController = require('./app/controller/user.controller')
+const loginController = require('./app/controller/login.controller')
 app.post('/loanRepayment', function (req, res) {
     loanRepaymentController.add(req, res)
 })
@@ -28,5 +29,8 @@ app.get('/user/:id', function (req, res) {
     }   )
 app.post('/user', function (req, res) {
     userController.add(req, res)
+})
+app.post('/login', function (req, res) {
+    loginController.login(req, res)
 })
 app.listen(port, () => console.log(`Example app listening on port ${port}!`)) 

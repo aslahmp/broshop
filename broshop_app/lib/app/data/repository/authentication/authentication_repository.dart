@@ -36,4 +36,20 @@ class AuthenticationRepository implements IAuthenticationRepository {
       return Failure(e.toString());
     }
   }
+
+  @override
+  Future<Result> signIn(String email, String password) async {
+    try {
+      var resultJson = await _helper.post(
+          url: Uri.parse(APIEndPoints.urlString(EndPoints.login)),
+          body: {"email": email, "password": password});
+
+      UserManager.saveUserId(resultJson["email"].toString());
+      UserManager.setUserAdminStatusStatus(true);
+      UserManager.setUserLoginStatus(true);
+      return Success('id');
+    } catch (e) {
+      return Failure(e.toString());
+    }
+  }
 }
