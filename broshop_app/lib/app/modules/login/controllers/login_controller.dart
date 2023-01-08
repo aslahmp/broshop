@@ -1,5 +1,4 @@
 import 'package:broshop_app/infrastructure/index.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../infrastructure/managers/index.dart';
