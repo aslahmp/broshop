@@ -1,6 +1,9 @@
 import '../config.dart';
 
-enum EndPoints { login }
+enum EndPoints {
+  login,
+  user,
+}
 
 class APIEndPoints {
   static String urlString(EndPoints endPoint) {
@@ -13,6 +16,8 @@ extension EndPointsExtension on EndPoints {
     switch (this) {
       case EndPoints.login:
         return "/login";
+      case EndPoints.user:
+        return "/user";
     }
   }
 }

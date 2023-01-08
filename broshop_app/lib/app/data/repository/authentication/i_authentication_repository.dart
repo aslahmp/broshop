@@ -1,3 +1,5 @@
+import '../../../../infrastructure/networking/index.dart';
+
 abstract class IAuthenticationRepository {
-  Future<void> signInWithGoogle();
+  Future<Result> signInWithGoogle();
 }
