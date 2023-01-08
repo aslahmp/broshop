@@ -18,6 +18,7 @@ db.sequelize.sync({
     });
 const userController = require('./app/controller/user.controller')
 const loginController = require('./app/controller/login.controller')
+const productController = require('./app/controller/product.controller')
 app.post('/loanRepayment', function (req, res) {
     loanRepaymentController.add(req, res)
 })
@@ -32,5 +33,8 @@ app.post('/user', function (req, res) {
 })
 app.post('/login', function (req, res) {
     loginController.login(req, res)
+})
+app.post('/product', function (req, res) {
+    productController.add(req, res)
 })
 app.listen(port, () => console.log(`Example app listening on port ${port}!`)) 

@@ -11,6 +11,9 @@ class UserController extends GetxController {
   UserModel? userModel;
   final IUserRepository _userRepo = UserRepository();
   void getProfile() async {
+    if (UserManager.isAdmin) {
+      return;
+    }
     var result = await _userRepo.getProfile();
     if (result.isSuccess) {
       userModel = result.success;

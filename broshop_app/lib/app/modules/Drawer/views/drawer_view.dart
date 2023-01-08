@@ -1,6 +1,7 @@
 import 'package:broshop_app/app/controllers/user_controller.dart';
 import 'package:broshop_app/app/modules/Drawer/views/local.widgets/drawer_tile.dart';
 import 'package:broshop_app/infrastructure/index.dart';
+import 'package:broshop_app/infrastructure/managers/index.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -21,7 +22,7 @@ class DrawerView extends GetView<UserController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Profile(),
+              UserManager.isAdmin ? verticalSpace(40) : const Profile(),
               DrawerTile(
                   text: 'Log Out',
                   icon: Icons.logout,

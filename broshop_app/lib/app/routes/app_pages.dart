@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/ProductAddEdit/bindings/product_add_edit_binding.dart';
+import '../modules/ProductAddEdit/views/product_add_edit_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -31,6 +33,11 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => const LoginView(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRODUCT_ADD_EDIT,
+      page: () => const ProductAddEditView(),
+      binding: ProductAddEditBinding(),
     ),
   ];
 }
