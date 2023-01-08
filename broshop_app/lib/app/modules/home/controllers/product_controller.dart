@@ -1,4 +1,5 @@
 import 'package:broshop_app/app/data/model/product_model.dart';
+import 'package:broshop_app/app/modules/Cart/controllers/cart_controller.dart';
 import 'package:broshop_app/app/routes/app_pages.dart';
 import 'package:broshop_app/infrastructure/managers/index.dart';
 import 'package:get/get.dart';
@@ -21,6 +22,9 @@ class ProductController extends GetxController {
     if (UserManager.isAdmin) {
       await Get.toNamed(Routes.PRODUCT_ADD_EDIT, arguments: productModel);
       getProducts();
+    } else {
+      var cartController = Get.find<CartController>();
+      cartController.products.add(productModel);
     }
   }
 

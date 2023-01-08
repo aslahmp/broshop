@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/Cart/bindings/cart_binding.dart';
+import '../modules/Cart/views/cart_view.dart';
 import '../modules/ProductAddEdit/bindings/product_add_edit_binding.dart';
 import '../modules/ProductAddEdit/views/product_add_edit_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -38,6 +40,11 @@ class AppPages {
       name: _Paths.PRODUCT_ADD_EDIT,
       page: () => const ProductAddEditView(),
       binding: ProductAddEditBinding(),
+    ),
+    GetPage(
+      name: _Paths.CART,
+      page: () => const CartView(),
+      binding: CartBinding(),
     ),
   ];
 }

@@ -17,6 +17,8 @@ class HomeController extends GetxController {
       await Get.toNamed(Routes.PRODUCT_ADD_EDIT);
       var productController = Get.find<ProductController>();
       productController.getProducts();
-    } else {}
+    } else {
+      Get.toNamed(Routes.CART);
+    }
   }
 }
