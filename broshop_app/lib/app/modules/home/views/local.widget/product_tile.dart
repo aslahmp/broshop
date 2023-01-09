@@ -19,8 +19,8 @@ class ProductTile extends GetView<ProductController> {
     return Container(
       decoration: BoxDecoration(
           border: Border.all(), borderRadius: BorderRadius.circular(30)),
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.symmetric(vertical: 20),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Row(
         children: [
           Padding(
@@ -79,7 +79,7 @@ class ProductTile extends GetView<ProductController> {
                           onPressed: () {
                             controller.productDelete(product);
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.delete,
                             color: AppColors.darkRed,
                           ))

@@ -11,7 +11,7 @@ class BottomTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<CartController>(builder: (controller) {
       return Container(
-        decoration: BoxDecoration(color: AppColors.blue),
+        decoration: const BoxDecoration(color: AppColors.blue),
         width: double.infinity,
         height: 70,
         child: Row(
@@ -22,7 +22,7 @@ class BottomTile extends StatelessWidget {
               style: AppTextStyles.bold
                   .copyWith(color: AppColors.white, fontSize: 20),
             ),
-            Spacer(),
+            const Spacer(),
             ElevatedButton(
               onPressed: () {
                 controller.buy();

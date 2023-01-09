@@ -24,6 +24,6 @@ class HomeView extends GetView<HomeController> {
           },
           child: Icon(UserManager.isAdmin ? Icons.add : Icons.shopping_cart),
         ),
-        body: Products());
+        body: const Products());
   }
 }

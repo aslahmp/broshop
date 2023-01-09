@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:broshop_app/app/data/model/product_model.dart';
 import 'package:flutter/services.dart';
-import 'package:result_type/src/result.dart';
 
 import '../../../../infrastructure/networking/index.dart';
 import 'i_product_repository.dart';

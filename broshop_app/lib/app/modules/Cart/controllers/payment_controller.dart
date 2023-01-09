@@ -1,7 +1,7 @@
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class RazorpayController {
-  var _razorpay = Razorpay();
+  final _razorpay = Razorpay();
   void pay(
       num amount,
       // String name,
